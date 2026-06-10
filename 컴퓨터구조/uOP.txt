@@ -1,15 +1,15 @@
-명령                        	opcode     포맷                  T4            T5         T6        T7
-No operation              	0x0 0000   NOP                   UNOP       UNOP    UNOP    UNOP
-Negate AC                  	0x1 0001   NOT                   UNOT       UNOP    UNOP    UNOP
-Shift left AC               	0x2 0010   SHL                   USHL        UNOP    UNOP    UNOP
-Shift right AC              	0x3 0011   SHR                   USHR        UNOP    UNOP    UNOP
-Jump to addr                	0x4 0100   JMP addr              IRAD2PC   UNOP    UNOP    UNOP
-Branch on zero to addr      	0x5 0101   BZ addr (if Z==1)     IRAD2PC   UNOP    UNOP    UNOP
-Branch on zero to addr      	0x5 0101   BZ addr (if Z==0)     UNOP      UNOP    UNOP    UNOP
-Load M[addr] to AC          	0x8 1000   LDA addr              IRAD2AR   READ    BR2AC   UNOP
-Add M[addr] to AC           	0x9 1001   ADD addr              IRAD2AR   READ    UADD    UNOP
-Subtract M[addr] from AC   	0xA 1010   SUB addr              IRAD2AR   READ    USUB    UNOP
-Bitwise AND M[addr] to AC 	0xB 1011   AND addr              IRAD2AR   READ    UAND    UNOP
-Bitwise OR M[addr] to AC   	0xC 1100   OR addr               IRAD2AR   READ    UOR     UNOP
-Bitwise XOR M[addr] to AC  	0xD 1101   XOR addr              IRAD2AR   READ    UXOR    UNOP
-Store AC to M[addr]         	0xF 1111   STR addr              IRAD2AR   AC2BR   WRITE   UNOP
+명령                        		opcode     포맷                  		T4            T5         T6        T7
+No operation              	0x0 0000   NOP                   	UNOP       UNOP    UNOP    UNOP
+Negate AC                  	0x1 0001   NOT                   	UNOT       UNOP    UNOP    UNOP
+Shift left AC               		0x2 0010   SHL                   		USHL        UNOP    UNOP    UNOP
+Shift right AC              	0x3 0011   SHR                   		USHR        UNOP    UNOP    UNOP
+Jump to addr                	0x4 0100   JMP addr              	IRAD2PC   UNOP    UNOP    UNOP
+Branch on zero to addr      	0x5 0101   BZ addr (if Z==1)     	IRAD2PC   UNOP    UNOP    UNOP
+Branch on zero to addr      	0x5 0101   BZ addr (if Z==0)     	UNOP      UNOP    UNOP    UNOP
+Load M[addr] to AC          	0x8 1000   LDA addr              	IRAD2AR   READ    BR2AC   UNOP
+Add M[addr] to AC           	0x9 1001   ADD addr              	IRAD2AR   READ    UADD    UNOP
+Subtract M[addr] from AC   	0xA 1010   SUB addr              	IRAD2AR   READ    USUB    UNOP
+Bitwise AND M[addr] to AC 	0xB 1011   AND addr              	IRAD2AR   READ    UAND    UNOP
+Bitwise OR M[addr] to AC   	0xC 1100   OR addr               	IRAD2AR   READ    UOR     UNOP
+Bitwise XOR M[addr] to AC  	0xD 1101   XOR addr              	IRAD2AR   READ    UXOR    UNOP
+Store AC to M[addr]         	0xF 1111   STR addr              	IRAD2AR   AC2BR   WRITE   UNOP
